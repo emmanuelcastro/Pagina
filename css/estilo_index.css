@@ -1,3 +1,6 @@
+:root{
+  --headerColor: #121212;
+}
 /* navbar */
 .btn {
   color: #fff;
@@ -216,3 +219,8 @@ audio{
   cursor: pointer;
 }
 /*FIN ESTILOS DE API */
+@media screen and ( max-width: 800px){
+  header{
+    flex-direction: column;
+  }
+}
