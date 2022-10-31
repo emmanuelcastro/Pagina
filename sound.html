@@ -8,29 +8,29 @@
     <link rel="stylesheet" href="css/sound_style.css">
     <title>Demo Sonidos</title>
 </head>
-<header>
-    <a href="/index.html" class="logo">
-        <img src="img/logo.png" alt="Logo de la pagina">
-        <h2 class="nombre-pagina">Samples Sound</h2>
-    </a>
-    <div class="contenedor_nav">
-        <nav>
-            <a href="/index.html" class="nav-link">Inicio</a>
-            <a href="/nosotros.html" class="nav-link">Nosotros</a>
-            <a href="/registro.html" class="nav-link">Registrarse</a>
-        </nav>
-    </div>
-</header>
 <body>
+    
     <div id="appSounds">
         <div class="container">
+            <header class="header">
+                <a href="/index.html" class="logo">
+                    <img src="img/logo.png" alt="Logo de la pagina">
+                    <h2 class="nombre-pagina">Samples Sound</h2>
+                </a>
+                <div class="contenedor_nav">
+                    <nav>
+                        <a href="/index.html" class="nav-link">Inicio</a>
+                        <a href="/nosotros.html" class="nav-link">Nosotros</a>
+                        <a href="/registro.html" class="nav-link">Registrarse</a>
+                    </nav>
+                </div>
+            </header>
             <categoria-component v-for="categoria in categorias" :datos-categoria="categoria"></categoria-component>
+            <footer id="idfooter" class="pie"></footer>
         </div>
     </div>
-    <footer id="idfooter">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="sound.js"></script>
     <script src="js/footer.js"></script>
 </body>
-
 </html>
