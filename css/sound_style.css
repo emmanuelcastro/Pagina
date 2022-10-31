@@ -1,8 +1,7 @@
-/*----------------------------------------------------------------*/
-/* Hoja de estilos                                                */
-/*----------------------------------------------------------------*/
 :root{
     --headerColor: #121212;
+    --item-bg-color: #21282c;
+    --body-bg: #121212;
 }
 /* Fuente para toda la página */
 * {
@@ -11,16 +10,16 @@
     margin: 0;
     padding: 0;
 }
-
-
-/*----------------------------------------------------------------*/
-/* Definimos el contenedor grid                                   */
-/*----------------------------------------------------------------*/
+/*Contenedor grid*/
+#appSounds{
+    background-color: var(--body-bg);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 .container {
-    background-color: black;
     display: grid;
-
-    /* Uso un atajo para definir cuatro filas / seis columnas */
+    height: 100%;
     grid-template-rows: 100px 1fr auto;
     grid-template-columns:  15% 15% auto auto 15% 15%;
 
@@ -28,15 +27,10 @@
     grid-template-areas: "header header header header header header"
         "bass brass strings guitar piano sound_fx"
         "pie pie pie pie pie pie";
-
-    /* separamos los items con gap */
     gap: 2%;
-
-    /* Hacemos que el diseño ocupe casi el alto total del navegador */
-    /* height: 90vh; */
 }
-
-.subsectionmenu-list-item {
+/*No utilizada*/
+/* .subsectionmenu-list-item {
     display: flex;
     font-size: .875em;
     font-size: var(--font-size-body);
@@ -46,86 +40,65 @@
     margin: 0 .6em;
     padding: 4px;
     font-size: 16px;
-}
+} */
 
-/*----------------------------------------------------------------*/
-/* Defino el nombre y color de cada area del grid                 */
-/*----------------------------------------------------------------*/
+/*Definicion de cada grid-area*/
 .header {
     grid-area: header;
-    background-color: #21282c;
 }
 
 .bass {
     grid-area: bass;
-    background-color: #21282c;
 }
 
 .brass {
     grid-area: brass;
-    background-color: #21282c;
-}
-
-.drums {
-    grid-area: drums;
-    background-color: #21282c;
 }
 .strings{
     grid-area: strings;
-    background-color: #21282c;
 }
 .guitar {
     grid-area: guitar;
-    background-color: #21282c;
 }
 
 .piano {
     grid-area: piano;
-    background-color: #21282c;
 }
 
 .sound_fx {
     grid-area: sound_fx;
-    background-color: #21282c;
 }
-
+/* El footer esta fuera de .container*/
 .pie {
     grid-area: pie;
-    background-color: #21282c;
 }
 
-
-/*----------------------------------------------------------------*/
-/* Definimos la apariencia de cada item del grid                  */
-/*----------------------------------------------------------------*/
+/*Apariencia de los items dentro del grid*/
 .item {
     text-align: center;
     font-size: larger;
     padding: 10px;
     color: rgb(239, 240, 245);
     border-radius: 10px;
+    background-color: var(--item-bg-color);
 }
-
 /*----------------------------------------------------------------*/
-/* Definimos la apariencia de cada subitem del grid                  */
-/*----------------------------------------------------------------*/
-.subitem {
+/* Definimos la apariencia de cada subitem del grid    */
+/*No se utiliza*/
+/* .subitem {
     padding: 0px 0px 0px 0px;
     border-radius: 15px 15px 0px 0px;
     width: 100%;
     max-width: 400px;
-    /*  border-radius: 10px; */
-}
+} */
 
-/*----------------------------------------------------------------*/
+/*Estilos de cada pista*/
 .headerimg {
     padding: 0;
     border-radius: 0;
     width: 100%;
     max-width: 400px;
-    /*  border-radius: 10px; */
 }
-
 /**/
 .cell{
     position: relative;
@@ -189,40 +162,39 @@ header {
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 10px;
     padding: 15px;
     width: 100%;
-    left: 0;
-    bottom: 0;
     padding: 20px;
     height: 75px;
     margin-top: 0;
     font-size: 38px;
   }
 /*FIN FOOTER DENIS*/
-/*----------------------------------------------------------------*/
 /* Punto de corte para pantallas tipo tablet                      */
-/*----------------------------------------------------------------*/
 @media only screen and (max-width: 800px) {
     .container {
-        /* Uso un atajo para definir 4 filas / 2 columna */
-        grid-template-rows: 100px auto auto 60px auto;
-        grid-template-columns: auto auto;
-
         /* Distribuimos el contenido en cada fila */
-        grid-template-areas: "header header" "bass brass" "strings guitar" "piano sound_fx " "pie pie";
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:"header header""bass brass""strings guitar""piano sound_fx""pie pie";
+        row-gap: 0;
+    }
+    header{
+        flex-direction: column;
+    }
+    .item{
+        margin-top: 1em;
     }
 }
 /* Punto de corte para pantallas tipo celular                     */
-/*----------------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
     .container {
-        /* Uso un atajo para definir 6 filas / 1 columna */
-        /* Distribuimos el contenido en cada fila */
         display: flex;
         flex-direction: column;
     }
     .item{
         margin-bottom: 20px;
+    }
+    #idfooter{
+        font-size: 28px;
     }
 }
