@@ -134,7 +134,7 @@ const app = Vue.createApp({
                             titulo:"Voodoo Strings",
                             imagen:"img/voodoo.jpg",
                             altimagen:"Voodoo",
-                            sonido: "sounds/HardRock.wav",
+                            sonido: "audios/HardRock.wav",
                             title:"It's time to add a little bit of spice, lo-fi saturation and a touch of evil to your Cinematic x Hip Hop x Trap beats: This is Voodoo Strings! This is the start of a new series we are bringing to the producer community to enhance their projects as well as their beats! This collection of string loops was heavily processed using lo-fi saturation, pitch shifting manipulation, ambient reverb halls and delay's, distortion enhancements, eq, compression and a touch of sweet voodoo love from the underworld to give each individual string loop a touch of depth, character and a whole lotta darkness! All samples come recorded in 24-bit 44 khz and all samples come Royalty Free for all your Commercial Use Needs! Here's What You Get Inside: 50 Total Files / 147 MB of Content 50 String Loops Perfect for Cinematic x Hip Hop x Trap x Future Bass 24-bit 44 khz Audio Quality Royalty Free Samples Instant Download After Purchase"
                         },
                         {
@@ -142,20 +142,20 @@ const app = Vue.createApp({
                             imagen:"img/CelloMoods.jpg",
                             altimagen:"Cello image",
                             title:"A selection of cello ensemble loops with an orchestral, world music vibe.",
-                            sonido: "sounds/cello.wav"
+                            sonido: "audios/cello.wav"
                         },
                         {
                             titulo:"Drill Strings",
                             imagen:"img/Drill.jpg",
                             altimagen:"Drill Strings",
                             title:"Samples Choice presents Drill Strings The pack contains 159 samples with 21melodies kits. Inside the pack, you’ll find amazing drill melodies with strings, legato, staccato, pizzicato, cellos, harp, sad and dark piano, plucks, and many more. As usual, you have the whole melody layered and the single instruments for full control to build more and more melodies. Then, we have added some new 808 basses and from our collections. A great collection inspired by Po Smoke, Migos, Dutchvelli, Hargo, Unknow T, Bandokay & Double Lz, AXL Beats, TeeZandos, and many more. Pack details: 159 x wav 44.1 khz 24-bit All files are royalty-free and ready to work on all major music software. Please Note: the drum Loops are not inside the pack Other genres that this package may be useful in: Lo-fi Hip Hop Bass Music",
-                            sonido: "sounds/drill.wav"},
+                            sonido: "audios/drill.wav"},
                         {
                             titulo:"Hall Violins",
                             imagen:"img/HallViolins.jpg",
                             altimagen:"Violins",
                             title:"'Hall Violins' brings you 17 Violin Sounds that are filled with inspiring melodies.",
-                            sonido: "sounds/violin.wav"
+                            sonido: "audios/violin.wav"
                         }
                     ]
                 },
