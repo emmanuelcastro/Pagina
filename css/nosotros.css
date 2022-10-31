@@ -1,39 +1,29 @@
+:root{
+  --person-bg: #281c6b;
+  --person-nameTextColor:#b1c029ec;
+  --textColor: #ffffff;
+  --headerColor: #21121c;
+}
 * {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
 }
-
+html{
+  font-size: 62.5%;
+}
 body {
   text-align: center;
-  /*font-family: sans-serif;*/
   font-family: "Roboto", sans-serif;
   background: #242222;
-  margin: 0;
-}
-
-.head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 63px;
-  background: #171717;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
 }
 /* HEADER DE EMMANUEL */
 header {
-  position: relative;
-  top:0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   min-height: 70px;
-  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
 
@@ -56,122 +46,68 @@ header {
   height: 64px;
   margin-right: 10px;
 }
-/* .contenedor_nav {
-  position: absolute;
-  left: 80%;
-  transform: translate(-50%, -50%);
-} */
 a {
   text-decoration: none;
   color: #ffffff;
 }
-
 nav a {
   padding-right: 10px;
 }
-
 .contenedor_nav nav>a:hover {
   transform: translateY(-5px);
   transition: 500ms;
 }
+.nombre-pagina{
+  font-size: 3rem;
+}
 /* FIN HEADER EMMANUEL */
-
-.title {
-  margin: 4rem 0;
-  /*font-family: "Krub", sans-serif;
-  font-family: "Poppins", sans-serif;*/
-  /*margin-bottom: 75px;*/
-  font-family: "Roboto", sans-serif;
-  font-size: 90px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: rgb(168, 142, 240);
-}
-
-.title {
-  margin-bottom: 40px;
-  font-size: 60px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-p {
-  margin-bottom: 40px;
-  font-size: 38px;
-  font-family: "Roboto", sans-serif;
-  color: rgb(178, 188, 214);
-  padding: 0 100px;
-}
-
-.lista {
-  font-size: 40px;
-  color: rgb(178, 214, 189);
-  font-family: "Roboto", sans-serif;
-  /*font-family: "Krub", sans-serif;
-  font-family: "Poppins", sans-serif;*/
-}
-
-.content {
-  /*height: 140vh; /*Tamanio*/
-  /*font-family: "Krub", sans-serif;
-  font-family: "Poppins", sans-serif;*/
-  font-family: "Roboto", sans-serif;
-  height: 100%;
-  /* display: flex; */
+#main{
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  color: var(--textColor);
+  font-size: 4rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+#intro{
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
   align-items: center;
 }
-
-.sau {
-  /*Color del box */
-  padding: 30px;
-  background: #242222;
+.lista{
+  text-align: left;
 }
-
-.box-container {
-  display: flex;
+.persons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
+  gap: 2rem;
+  max-width: 100%;
 }
-
-.box-container .box {
-  /*Contenido del Box*/
-  height: 60rem;
-  width: 31rem;
-  background: #281c6b;
-  text-align: center;
-  border-radius: 0.2rem;
-  box-shadow: 0 0.3rem 5rem rgba(16, 85, 16, 0.5);
-  margin: 2rem;
+.person{
+  background-color: var(--person-bg);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: flex-start;
 }
-
-.box-container .box h3 {
-  font-size: 35px;
-  color: #b1c029ec;
-  margin: 1rem 0;
+.person-name{
+  color: var(--person-nameTextColor);
 }
-
-.box-container .box p {
-  /*Frase dentro del box */
-  padding: 0 30px;
-
-  font-size: 30;
+.person-img{
+  max-width: 100%;
 }
-
-.contact {
-  padding-top: 20px;
-  background: #171717;
-  padding-bottom: 0;
+.person-social{
+  align-self: flex-end;
 }
 /* footer denis */
 #idfooter {
   background-color: black;
   color: white;
   text-align: center;
-  font-size: 10px;
+  font-size: 38px;
   padding: 15px;
   width: 100%;
   left: 0;
@@ -179,12 +115,8 @@ p {
   padding: 20px;
   height: 75px;
   margin-top: 0;
-  /*10px;*/
 }
-#idfooter p {
-  color: white
-}
-
+/*fin footer*/
 @media screen and (max-width: 1600px) {
   nav {
     padding: 30px 0px;
@@ -199,8 +131,18 @@ p {
   header {
     flex-direction: column;
   }
-
   nav {
     padding: 10px 0px;
+  }
+  #idfooter{
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 500px){
+  #idfooter>p{
+    padding: 0;
+  }
+  .persons{
+    grid-template-columns: 1fr;
   }
 }
