@@ -151,9 +151,13 @@ const validarFormulario = function (event) {
         if (sessionStorage.getItem(datosUsuario['user-name']) === null) {
             event.preventDefault();
             guardarDatosUsuario();
+            document.getElementById('mensaje-redireccion').style.display = "flex";
+            let body= document.getElementsByTagName('body')[0];
+            let main = document.getElementById('main');
+            body.removeChild(main)
             setTimeout(()=>{
                 window.location.assign( '../index.html');
-            },1000)
+            },3000)
         } else {
             event.preventDefault();
         }
