@@ -7,6 +7,9 @@
 /* Fuente para toda la página */
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -135,19 +138,6 @@
     width: 100%;
     bottom: 25px;
 }
-
-/* Punto de corte para pantallas tipo tablet                      */
-/*----------------------------------------------------------------*/
-@media only screen and (max-width: 800px) {
-    .container {
-        /* Uso un atajo para definir 4 filas / 2 columna */
-        grid-template-rows: 100px auto auto 60px auto;
-        grid-template-columns: auto auto;
-
-        /* Distribuimos el contenido en cada fila */
-        grid-template-areas: "header header" "bass brass" "strings guitar" "piano sound_fx " "pie pie";
-    }
-}
 /* HEADER DE EMMANUEL */
 header {
     position: relative;
@@ -180,11 +170,6 @@ header {
     height: 64px;
     margin-right: 10px;
   }
-  /* .contenedor_nav {
-    position: absolute;
-    left: 80%;
-    transform: translate(-50%, -50%);
-  } */
   a {
     text-decoration: none;
     color: #ffffff;
@@ -216,14 +201,28 @@ header {
   }
 /*FIN FOOTER DENIS*/
 /*----------------------------------------------------------------*/
+/* Punto de corte para pantallas tipo tablet                      */
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 800px) {
+    .container {
+        /* Uso un atajo para definir 4 filas / 2 columna */
+        grid-template-rows: 100px auto auto 60px auto;
+        grid-template-columns: auto auto;
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "header header" "bass brass" "strings guitar" "piano sound_fx " "pie pie";
+    }
+}
 /* Punto de corte para pantallas tipo celular                     */
 /*----------------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
     .container {
         /* Uso un atajo para definir 6 filas / 1 columna */
-        grid-template: 100px auto auto auto 60px / 100%;
-
         /* Distribuimos el contenido en cada fila */
-        grid-template-areas: "header" "bass" "brass" "contenido" "der" "pie";
+        display: flex;
+        flex-direction: column;
+    }
+    .item{
+        margin-bottom: 20px;
     }
 }
