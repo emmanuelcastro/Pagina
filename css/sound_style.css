@@ -2,6 +2,7 @@
     --headerColor: #121212;
     --item-bg-color: #21282c;
     --body-bg: #121212;
+    --cell-bg: #252525;
 }
 /* Fuente para toda la página */
 * {
@@ -21,27 +22,12 @@
     display: grid;
     height: 100%;
     grid-template-rows: 100px 1fr auto;
-    grid-template-columns:  15% 15% auto auto 15% 15%;
-
-    /* Distribuimos el contenido en cada fila */
+    grid-template-columns:  repeat(6, 1fr);
     grid-template-areas: "header header header header header header"
         "bass brass strings guitar piano sound_fx"
         "pie pie pie pie pie pie";
     gap: 2%;
 }
-/*No utilizada*/
-/* .subsectionmenu-list-item {
-    display: flex;
-    font-size: .875em;
-    font-size: var(--font-size-body);
-    font-weight: 600;
-    letter-spacing: 1px;
-    position: relative;
-    margin: 0 .6em;
-    padding: 4px;
-    font-size: 16px;
-} */
-
 /*Definicion de cada grid-area*/
 .header {
     grid-area: header;
@@ -82,20 +68,15 @@
     border-radius: 10px;
     background-color: var(--item-bg-color);
 }
-/*----------------------------------------------------------------*/
-/* Definimos la apariencia de cada subitem del grid    */
-/*No se utiliza*/
-/* .subitem {
-    padding: 0px 0px 0px 0px;
-    border-radius: 15px 15px 0px 0px;
-    width: 100%;
-    max-width: 400px;
-} */
-
+.item-title{
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 1rem 0;
+}
 /*Estilos de cada pista*/
 .headerimg {
     padding: 0;
-    border-radius: 0;
+    border-radius: 0 0 30px 30px;
     width: 100%;
     max-width: 400px;
 }
@@ -105,11 +86,29 @@
     display: flex;
     flex-direction: column;
 }
+.cell-title{
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+.cell-img{
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+}
 .player {
     position: absolute;
     display: block;
     width: 100%;
-    bottom: 25px;
+    bottom: 0;
+    border-radius: 0 0 30px 30px;
+}
+.item-title,.cell-title{
+    /* background-image: linear-gradient(180deg,transparent 25%,#21282c 25%,#121212 50%,transparent 100%); */
+    background-color: var(--headerColor);
+    border-radius: 30px 30px 0 0;
 }
 /* HEADER DE EMMANUEL */
 header {
@@ -170,10 +169,10 @@ header {
     font-size: 38px;
   }
 /*FIN FOOTER DENIS*/
-/* Punto de corte para pantallas tipo tablet                      */
+/* Punto de corte para pantallas tipo tablet */
 @media only screen and (max-width: 800px) {
     .container {
-        /* Distribuimos el contenido en cada fila */
+        /* Distribuimos el contenido en cada fila*/
         grid-template-columns: 1fr 1fr;
         grid-template-areas:"header header""bass brass""strings guitar""piano sound_fx""pie pie";
         row-gap: 0;
@@ -185,7 +184,7 @@ header {
         margin-top: 1em;
     }
 }
-/* Punto de corte para pantallas tipo celular                     */
+/* Punto de corte para pantallas tipo celular */
 @media only screen and (max-width: 600px) {
     .container {
         display: flex;
